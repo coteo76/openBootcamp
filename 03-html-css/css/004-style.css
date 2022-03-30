@@ -3,6 +3,10 @@
     color: gray;
 }
 
+h1,
+h2 {
+    color: #333;
+}
 
 /* estilo clase miparrafo */
 .miparrafo {
