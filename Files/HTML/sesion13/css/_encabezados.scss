@@ -1,8 +1,0 @@
-
-
-    @include encabezados($fuente-normal);
-
-    h1 {
-        @extend %heading;
-        font-size: 2em;
-        }
