@@ -1,0 +1,47 @@
+/* estilo universal */
+* {
+    color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+    text-align: center;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+/* estilos del ejercicio */
+p {
+    color: #222;
+}
+
+.miparrafo {
+    color: tomato;
+    font-style: italic;
+}
+
+.miparrafo::selection {
+    background: yellow;
+}
+
+div p {
+    color:blueviolet;
+    font-weight: bold;
+}
+
+div p::selection {
+    background: greenyellow;
+}
+
+div .miparrafo {
+    color: chocolate;
+}
+
+div .miparrafo::selection {
+    background: orange;
+}
