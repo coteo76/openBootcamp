@@ -12,3 +12,7 @@ console.log(libreria.horaJS());
 // uso de la funcion hora de libreria.js
 console.log(libreria.hora());
 
+// codigo para el ejercicio 
+saludar("Alberto");
+console.log("Son las " + hora());
+
