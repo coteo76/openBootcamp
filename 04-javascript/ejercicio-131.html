@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>openBootCamp JavaScript Sesión 13 - Ejercicio 1</title>
+
+  <style>
+      * {
+          text-align: center;
+      }
+
+      #rectangulo {
+          width: 500px;
+          height: 250px;
+          margin: 0 auto;
+          background-color: #999;
+      }
+  </style>
+</head>
+
+<body>
+    <h1>openBootCamp</h1>
+    <h2>JavaScript 13.1 - Gestion de Eventos</h2>
+
+    <div id="rectangulo"></div>
+    <p><span id="texto">Coloca el cursor sobre el rectangulo.</span></p>
+
+    <script>
+
+        function getRandomColor() {
+            let color = parseInt(Math.random()*16777215);
+            return "#" + color.toString(16);
+        }
+
+        function fondoBlanco() {
+            document.getElementById('rectangulo').style.background = "#fff";
+            document.getElementById('texto').innerHTML = "Escogiendo color ...";
+        }
+
+        function fondoColor() {
+            let _color = getRandomColor();
+            document.getElementById('rectangulo').style.background = _color;
+            document.getElementById('texto').innerHTML = "Color de background: " + _color;
+        }
+
+        document.getElementById('rectangulo').addEventListener('mouseout', fondoColor );
+        document.getElementById('rectangulo').addEventListener('mouseover', fondoBlanco );
+
+    </script>
+
+</body>

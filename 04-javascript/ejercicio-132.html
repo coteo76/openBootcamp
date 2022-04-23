@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>openBootCamp JavaScript Sesión 13 - Ejercicio 2</title>
+
+  <style>
+      * {
+          text-align: center;
+      }
+
+      li {
+          list-style: none;
+          padding: 12px;
+      }
+
+  </style>
+</head>
+
+<body>
+    <h1>openBootCamp</h1>
+    <h2>JavaScript 13.2 - Gestion de Eventos</h2>
+
+    <h3>¿ Donde está la Torre Eiffel ?</h3>
+    <p>Copia la respuesta correcta:</p>
+    <ul>
+        <li id="respuesta1">48.8583, 2.2944</li>
+        <li id="respuesta2">47.2156, -2.1234</li>
+        <li id="respuesta3">-48.8583, 2.2944</li>
+    </ul>
+    <script>
+
+        function correcta() {
+            alert("Correcto !!")
+        }
+
+        function erronea() {
+            alert("Oh oh.... esa no es la respuesta correcta.")
+        }
+
+        document.getElementById('respuesta1').addEventListener('copy', correcta);
+        document.getElementById('respuesta2').addEventListener('copy', erronea);
+        document.getElementById('respuesta3').addEventListener('copy', erronea);
+
+    </script>
+
+</body>

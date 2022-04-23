@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>openBootCamp JavaScript Sesión 13 - Ejercicio 3</title>
+
+  <style>
+      * {
+          text-align: center;
+      }
+
+      .figura {
+          width: 500px;
+          height: 500px;
+          margin: 0 auto;
+          background-color: #999;
+          border-radius: 0px;
+      }
+
+      .circulo {
+          border-radius: 50%;
+      }
+
+  </style>
+</head>
+
+<body>
+    <h1>openBootCamp</h1>
+    <h2>JavaScript 13.3 - Gestion de Eventos</h2>
+
+    <div id="figura" class="figura"></div>
+    <p><span id="texto">Haz click o doble click en el cuadrado.</span></p>
+
+    <script>
+
+        function getRandomColor() {
+            let color = parseInt(Math.random()*16777215);
+            return "#" + color.toString(16);
+        }
+
+        function fondoColor() {
+            let _color = getRandomColor();
+            document.getElementById('figura').style.background = _color;
+            document.getElementById('texto').innerHTML = "Color de fondo: " + _color;
+        }
+
+        function cambiaForma() {
+            let aux = document.getElementById('figura');
+
+            if (aux.classList.contains('circulo')) {
+                aux.classList.remove('circulo');
+            } else {
+                aux.classList.add('circulo');
+            }
+        }
+
+        document.getElementById('figura').addEventListener('click', fondoColor );
+        document.getElementById('figura').addEventListener('dblclick', cambiaForma );
+
+    </script>
+
+</body>
