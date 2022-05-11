@@ -1,0 +1,11 @@
+{
+  "name": "introduccion",
+  "version": "1.0.0",
+  "description": "OpenBootCamp - JavaScript Básico - 1.Introducción a JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Oteo",
+  "license": "ISC"
+}
