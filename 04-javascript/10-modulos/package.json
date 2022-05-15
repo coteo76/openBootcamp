@@ -1,0 +1,15 @@
+{
+  "name": "modulos",
+  "version": "1.0.0",
+  "description": "openBootCamp JavaScript - 10 Modulos",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "coteo76",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}
