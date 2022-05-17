@@ -1,7 +1,7 @@
 // Crea un archivo JS que contenga las siguientes líneas
 
 // - Una función sin parámetros que devuelva siempre "true"
-const funcionVacia() {
+function funcionVacia() {
     return true;
 }
 funcionVacia();
