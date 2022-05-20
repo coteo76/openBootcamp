@@ -1,0 +1,43 @@
+/*
+    Crea un nuevo proyecto de Node
+    - Crea un fichero index.html (utiliza el comando "!")
+    - Crea un fichero index.js
+    - Integra el fichero index.js en el html
+    - En el fichero index.js:
+    - Crea una variable con tu nombre
+    - Crea una variable con tu apellido
+    - Crea un objeto con tu nombre y tu apellido
+    - Almacena el objeto anterior en la SessionStorage
+    - Almacena el objeto anterior en la LocalStorage
+    - Crea una cookie que caduque en 2 minutos con los datos del objeto anterior
+    - Observa en Google Chrome cómo se almacenan los datos en la SessionStorage, LocalStorage y las cookies
+    - Cierra el navegador, comenta las líneas que almacenan SessionStorage, LocalStorage y CookieStorage y vuelve a abrirlo
+    - Observa cómo la SessionStorage está vacía
+    - Observa cómo la LocalStorage sigue manteniendo el objeto que has almacenado antes de cerrar el navegador
+    - Observa cómo la cookie sigue manteniendo el objeto que has almacenado antes, aunque ya está caducado
+*/
+
+const _nombre = "Carlos";
+const _apellido = "Oteo";
+
+const objeto = { nombre: _nombre, apellido: _apellido, storage: '' };
+
+// almacenar objeto en SessionStorage
+objeto.storage = "sessionStorage";
+sessionStorage.setItem("objeto", JSON.stringify(objeto));
+console.log(JSON.parse(sessionStorage.getItem("objeto")));
+
+// almacenar objeto en LocalStorage
+objeto.storage = "localStorage";
+localStorage.setItem("objeto", JSON.stringify(objeto));
+console.log(JSON.parse(localStorage.getItem("objeto")));
+//  localStorage.removeItem("objeto");   // elimina objeto de localStorage
+
+// crear cookie
+const fecha = new Date(); // fecha actual
+fecha.setMinutes( fecha.getMinutes() + 2); // fecha actual + 2 minutos
+document.cookie = "objeto=" + JSON.stringify(objeto) + ";expires=" + fecha.toUTCString();
+
+
+
+
