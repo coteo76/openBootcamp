@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:openBootCamp}/02-python/11-sqlite/Alumnos.db",
+            "name": "alumnos"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
