@@ -1,0 +1,20 @@
+{% extends "peliculas/base.html" %}
+
+{% block title %}Directores{% endblock %}
+
+
+{% block content %}
+<ul>
+{% for director in object_list %}
+    <li onclick="window.location.href='{{director.id}}'">
+        <p class="nombre_director">{{ director.nombre }} {{ director.apellido }}</p>
+    </li>
+    {% cycle '' '' '</li><li>' %}
+{% empty %}
+    <li>Sin directores</li>
+{% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

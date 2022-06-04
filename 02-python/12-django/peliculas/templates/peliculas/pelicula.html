@@ -1,0 +1,16 @@
+{% extends "peliculas/base.html" %}
+
+{% block title %}Pelicula - {{ pelicula }}{% endblock %}
+
+{% block header-title %}{{ pelicula }}{% endblock %}
+
+{% block content %}
+<p><b>Año: </b>{{ pelicula.estreno }}</p>
+<p><b>Duracion: </b>{{ pelicula.duracion }} min</p>
+<h4>Sinopsis</h4>
+<p>{{ pelicula.descripcion | linebreaks }}</p>
+{% endblock %}
+
+{% block footer %}
+<a href="/peliculas/">Volver a Lista de Directores</a>
+{% endblock %}

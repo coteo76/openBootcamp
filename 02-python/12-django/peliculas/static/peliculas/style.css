@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  body {
+    width: 60%;
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: 'Noto Serif Display', serif;
+    margin-top: 3%;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+  
+  h2 {
+    font-size: 65px;
+  }
+  
+  h3 {
+    font-size: 50px;
+  }
+  
+  h4 {
+    font-size: 25px;
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+main {
+    width: 80%;
+    text-align: justify;
+    margin: 5% auto;
+}
+
+.nombre_director {
+    font-weight: 500;
+}
+
+a,
+.nombre_director,
+.nombre_pelicula {
+    text-decoration: none;
+    color: #333;
+  }
+  
+a:hover,
+.nombre_director:hover,
+.nombre_pelicula:hover {
+    color: #00BFA6;
+    cursor: pointer;
+  }
+
+li {
+    list-style: none;
+  }
